@@ -1,59 +1,47 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# SmartSchool API Backend 🏫
 
 <p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+  <img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="300" alt="Laravel Logo">
 </p>
 
-## About Laravel
+## Sobre el Proyecto
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+**SmartSchool** es un sistema integral multiplataforma diseñado para la gestión automatizada de asistencia escolar, monitoreo de alumnos y comunicación institucional. Este repositorio contiene el **Backend (API REST)** desarrollado en Laravel, el cual sirve como motor principal para la aplicación móvil (React Native).
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Este módulo fue diseñado e implementado como parte del proyecto de Residencia Profesional para la empresa **GMStore**.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Características Principales (Features) 🚀
 
-## Learning Laravel
+El sistema expone una API segura que maneja las siguientes funcionalidades:
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+* **Autenticación y Seguridad (Sanctum):** Login y control de sesiones mediante tokens.
+* **Segregación de Datos (Multi-rol):** * *Modo Admin/Escuela:* Acceso global a los datos de la institución.
+    * *Modo Padre de Familia:* Privacidad estricta; visualización exclusiva de los alumnos vinculados a su cuenta.
+* **Control de Asistencia:** Reloj checador automatizado con validación de registros duplicados por día.
+* **Gestión de Alumnos (CRUD):** Registro de perfiles incluyendo carga y almacenamiento de fotografías (Digital ID).
+* **Dashboard Ejecutivo:** Endpoints analíticos para la generación de estadísticas en tiempo real (Total de alumnos, tasas de asistencia y ausencias).
+* **Autorizaciones de Salida (Exit Passes):** [En Desarrollo] Módulo para solicitar y aprobar permisos de salida institucionales.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## Stack Tecnológico 🛠️
 
-## Laravel Sponsors
+* **Framework:** Laravel 11 (PHP)
+* **Base de Datos:** MySQL
+* **Autenticación:** Laravel Sanctum
+* **Almacenamiento:** Local Storage System (para manejo de imágenes `multipart/form-data`)
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+## Requisitos Previos
 
-### Premium Partners
+Para ejecutar este proyecto de forma local, necesitas tener instalado:
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+* PHP >= 8.2
+* Composer
+* MySQL o MariaDB
+* Node.js & NPM (opcional para compilar assets)
 
-## Contributing
+## Instalación y Configuración Local
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Sigue estos pasos para levantar el entorno de desarrollo:
 
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+1. Clonar el repositorio:
+   ```bash
+   git clone [https://github.com/Brybro88/smartschool-api.git](https://github.com/Brybro88/smartschool-api.git)
